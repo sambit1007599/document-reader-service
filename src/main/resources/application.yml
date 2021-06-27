@@ -1,0 +1,33 @@
+server:
+  port: 7075
+spring:
+  profiles:
+    active: local
+  application:
+    name: '@project.artifactId@'
+  http:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 20MB
+
+
+constants:
+  document:
+    supportedFileFormats:
+      - txt
+  error:
+    fileFormatNotSupportedException:
+      code: FILE_FORMAT_NOT_SUPPORTED
+      message: Only txt file format is supported. Please upload a file with txt format.
+
+#swagger
+swagger.api:
+  title: 'DOCUMENT READER SERVICE'
+  description: 'Provide Document Number data'
+  version: 1
+  apiType: private
+  defaultResponseMessage: false
+  basePackage: com.woulter.document
+  contact:
+    email: sambit1007599@gmail.com
+    teamName: Sambit Samal
